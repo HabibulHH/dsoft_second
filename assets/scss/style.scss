@@ -1,0 +1,11 @@
+// IMPORT THEME
+@import "./theme/default";
+@import "./theme/variables";
+@import "./theme/helper";
+@import "./theme/typography";
+@import "./theme/components";
+
+// IMPORT SECTIONS
+@import "./header";
+@import "./hero";
+@import "./contact";

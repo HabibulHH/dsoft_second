@@ -1,66 +1,212 @@
-<!Doctype html>
-<html class="no-js" lang="">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Basic Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- =============== PAGE TITLE =============== -->
+        <title>Durontosoft - A leading software company</title>
+        <!-- ============= FAVICON ICON ============= -->
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+        <!-- ============= VENDORS CSS ============= -->
+        <link rel="stylesheet" href="./assets/css/vendors/icons.css" />
+        <link rel="stylesheet" href="./assets/css/vendors/bootstrap.min.css" />
 
+        <!-- ============= MAIN CSS ============= -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
 
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+    <body>
+        <!-- ============= HEADER ============= -->
+        <header class="header-wrapper">
+            <nav class="navbar">
+                <div class="navbar-content d-flex">
+                    <div class="logo-wrapper">
+                        <a href="index.html">
+                            <img src="./assets/img/main-logo.png" alt="durontosoft" />
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    </div>
+                    <div class="menu-wrapper d-flex flex-column">
+                        <div class="top-menu d-flex justify-content-between align-items-center">
+                            <div class="top-menu-left">
+                                <ul class="contact-info d-flex">
+                                    <li class="contact-item">
+                                        <span class="item-icon"><i class="fal fa-envelope"></i></span>
+                                        <span class="item-text">durontosoft@gmail.com</span>
+                                    </li>
+                                    <li class="contact-item">
+                                        <span class="item-icon"><i class="fal fa-phone"></i></span>
+                                        <span class="item-text">+880174 896 3214</span>
+                                    </li>
+
+                                    <li class="contact-item">
+                                        <span class="item-icon"><i class="fal fa-map-marker-alt"></i></span>
+                                        <span class="item-text">Dhanmondi, Dhaka, Bangladesh</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top-menu-right">
+                                <div class="working-days">
+                                    <span>
+                                        <i class="fal fa-watch"></i>
+                                        Sun - Thu
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-menu d-flex align-items-center justify-content-between">
+                            <div class="main-menu-left d-flex align-items-center">
+                                <ul class="menu-items">
+                                    <li class="menu-item">
+                                        <a href="index.html" class="menu-link">Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="about.html" class="menu-link">About</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="services.html" class="menu-link">Services</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="blog.html" class="menu-link">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="button header-button"> Contact </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Mobile Nav -->
+            <div class="mobile-nav-wrapper">
+                <div class="row">
+                    <div class="mobile-nav-wrap">
+                        <div class="mobile-nav">
+                            <button type="button" class="close-nav">
+                                <i class="fal fa-times-circle"></i>
+                            </button>
+                            <nav class="sidebar-nav">
+                                <ul class="metismenu" id="mobile-menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                </ul>
+                                <a href="#" class="button mobile-nav-button mt-20 ml-20 d-inline-block"
+                                    >Contact Us
+                                    <i class="fal fa-paper-plane ml-10"></i>
+                                </a>
+                            </nav>
+
+                            <div class="action-bar">
+                                <a href="tel:123-456-7890"><i class="fal fa-watch"></i>Sun-Thu</a>
+                                <a href="mailto:modinatheme@gmail.com"
+                                    ><i class="fal fa-envelope"></i>durontosoft@gmail.com</a
+                                >
+                                <a href="tel:123-456-7890"><i class="fal fa-phone"></i>+880174 896 3214 </a>
+                                <div class="social-icons d-flex">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-behance"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+            <div id="hamburger">
+                <span><i class="fas fa-bars"></i></span>
+            </div>
+        </header>
 
-<!-- Add your site or application content here -->
-<div class="container">
-    <h1 class="h1_">Hello world! . <i class="fas fa-hand-point-up ex_c"></i></h1>
-</div>
+        <!-- ============= HERO ============= -->
+        <section class="hero-wrapper bg-cover" style="background-image: url('./assets/img/hero-bg.png')">
+            <div class="hero-overlay"></div>
+            <div class="hero-top">
+                <!-- Dividers -->
+                <div class="hero-divider">
+                    <div class="rec"></div>
+                </div>
+                <div class="rec-2 selected"></div>
+                <div class="rec-3"></div>
+            </div>
+            <div class="hero-bottom">
+                <div class="bottom-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="content-left">
+                                <ul class="social-items d-flex flex-wrap align-items-center">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">Facebook</a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">Instagram</a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">Twitter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content-right">
+                                <a href="#" class="button hero-button">
+                                    See our works
+                                    <span class="icon">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Dividers -->
+        </section>
 
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="js/main.js"></script>
+        <!-- ============= APPOINTMENTS ============= -->
+        <section class="appointments-wrapper bg-cover" style="background-image: url('./assets/img/appointment-bg.png')">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Private Appointments</h2>
+                </div>
+                <div class="appointments-form-wrapper">
+                    <form class="appointments-form">
+                        <div class="form-item">
+                            <input type="text" placeholder="name" />
+                        </div>
+                        <div class="form-item">
+                            <input type="text" placeholder="Phone Number" />
+                        </div>
+                        <div class="form-item">
+                            <input type="email" placeholder="Email Address" />
+                        </div>
+                        <button class="button-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-</body>
+        <!-- ============= VENDORS JS ============= -->
+        <script src="./assets/js/vendors/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/vendors/bootstrap.min.js"></script>
+        <script src="./assets/js/vendors/jquery.waypoints.min.js"></script>
+        <script src="./assets/js/vendors/metismenu.js"></script>
+
+        <!-- ============= MAIN JS ============= -->
+        <script src="./assets/js/active.js"></script>
+    </body>
 </html>
