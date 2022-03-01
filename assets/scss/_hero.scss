@@ -76,9 +76,16 @@
         right: 0;
         left: 0;
         overflow-x: hidden;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .content-left {
-            max-width: 100%;
+            min-width: 50%;
             min-height: 120px;
             display: flex;
             align-items: center;
@@ -88,15 +95,20 @@
             @media (max-width: 575px) {
                 padding: 0 20px;
             }
+
             .social-item {
                 position: relative;
 
-                @media (max-width: 1290px) {
-                    margin-bottom: 15px;
-                }
-
                 &:not(:last-child) {
                     margin-right: 60px;
+
+                    @media (max-width: 1020px) {
+                        margin-right: 40px;
+                    }
+
+                    @media (max-width: 575px) {
+                        margin-right: 30px;
+                    }
                 }
 
                 &::before {
@@ -118,18 +130,31 @@
                     color: $color-yellow;
                 }
 
-                @media (max-width: 575px) {
-                    font-size: 25px;
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 360px) {
+                    font-size: 16px;
                 }
             }
         }
 
         .content-right {
+            min-width: 50%;
             min-height: 120px;
             background-color: $color-light-gray;
             display: flex;
             justify-content: start;
             padding: 20px 60px;
+
+            @media (max-width: 1300px) {
+                min-width: 30%;
+            }
+
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
 
             @media (max-width: 575px) {
                 padding: 20px 20px;
@@ -150,9 +175,59 @@
                     margin-left: 20px;
                 }
 
-                @media (max-width: 575px) {
-                    font-size: 25px;
+                @media (max-width: 600px) {
+                    font-size: 20px;
                 }
+            }
+        }
+    }
+}
+
+/* ====================================================
+    HERO TWO
+ ====================================================== */
+.hero-2-wrapper {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    margin-top: -170px;
+    background-color: $color-dark;
+    // background: linear-gradient(94.18deg, rgba(229 229 229 1.79), rgba(53 52 110 99.01));
+    background: linear-gradient(94deg, rgba(229, 229, 229, 0.5), rgba(119, 100, 172, 1));
+
+    @media (max-width: 575px) {
+        padding-bottom: 50px;
+    }
+
+    .hero-heading {
+        color: $color-primary;
+    }
+
+    .left-content {
+        .body-text {
+            width: 80%;
+        }
+    }
+
+    .right-content {
+        width: 100%;
+
+        @media (max-width: 991px) {
+            margin-top: 50px;
+        }
+
+        .hero-illustration {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .buttons-wrapper {
+        .button {
+            @media (max-width: 320px) {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 5px;
+                text-align: center;
             }
         }
     }

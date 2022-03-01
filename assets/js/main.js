@@ -24,5 +24,17 @@
         });
 
         $("#mobile-menu").metisMenu();
+
+        // HIGHLIGHT ACTIVE LINK
+        const activePage = location.href;
+        const navLinks = document.querySelectorAll(".navbar-items-2 .navbar-link");
+        navLinks.forEach((link) => {
+            if (link.href === activePage) {
+                link.className = "current";
+            }
+        });
+
+        // MODAL VIDEO
+        $(".modal-video-active").modalVideo();
     }); // end document ready function
 })(jQuery); // End jQuery

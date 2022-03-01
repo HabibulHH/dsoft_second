@@ -1,0 +1,95 @@
+.services-wrapper {
+    padding: 100px 0px;
+    position: relative;
+    background-color: #e5e5e5;
+    overflow: hidden;
+
+    .section-head {
+        margin-bottom: 80px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .services-card {
+        max-width: 350px;
+        width: 100%;
+        padding: 30px;
+        background: $gradient-color-1;
+        border-radius: 180px 180px 22px 22px;
+        border: 2px solid transparent;
+        // border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+        // border-image-slice: 1;
+        border-color: rgba(255, 255, 255, 0.6);
+
+        @media (max-width: 767px) {
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        @media (max-width: 575px) {
+            padding: 30px;
+            max-width: 300px;
+        }
+
+        .card-icon {
+            width: 250px;
+            height: 250px;
+            background-color: $color-primary;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+
+            @media (max-width: 767px) {
+                width: 100px;
+                height: 100px;
+            }
+
+            img {
+                @media (max-width: 767px) {
+                    width: 50%;
+                }
+            }
+        }
+
+        .card-heading {
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            @media (max-width: 767px) {
+                margin: 10px 0px;
+            }
+        }
+
+        .card-text {
+            color: $color-primary;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        width: 730px;
+        height: 730px;
+        border-radius: 50%;
+        background: rgba(249, 172, 73, 0.22);
+        filter: blur(100px);
+        position: absolute;
+        z-index: -1;
+    }
+
+    &::after {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

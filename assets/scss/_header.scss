@@ -29,8 +29,12 @@
         justify-content: center;
         border-right: 1px solid $color-primary;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1199px) {
             min-width: 250px;
+        }
+
+        @media (max-width: 1015px) {
+            min-width: 200px;
         }
 
         @media (max-width: 400px) {
@@ -51,8 +55,12 @@
         padding: 5px 50px;
         border-bottom: 1px solid $color-primary;
 
-        @media (max-width: 1082px) {
+        @media (max-width: 1200px) {
             padding: 5px 25px;
+        }
+
+        .top-menu-right {
+            margin-right: 35px;
         }
     }
 
@@ -111,12 +119,51 @@
 
         .menu-item {
             display: inline-block;
+            position: relative;
             &:not(:last-child) {
                 margin-right: 45px;
             }
         }
 
-        .menu-link {
+        .submenu-wrapper {
+            &:hover {
+                .submenu {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        // Submenu
+        .submenu {
+            min-width: 100px;
+            width: max-content;
+            padding: 10px 20px;
+            background-color: $color-yellow;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            opacity: 0;
+            margin-top: 10px;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+
+            .submenu-item {
+                width: 100%;
+                display: block;
+                &:not(:last-child) {
+                    padding-bottom: 10px;
+                }
+            }
+
+            .submenu-link {
+                color: $color-white;
+            }
+        }
+
+        .menu-link,
+        .submenu-link {
             display: inline-block;
             font-weight: 500;
             font-size: 20px;
@@ -167,153 +214,95 @@
     }
 }
 
-// MOBILE NAV
-.mobile-nav-wrapper {
-    .mobile-nav {
-        position: fixed;
-        right: -540px;
-        top: 0;
-        width: 500px;
-        height: 100vh;
-        scroll-behavior: smooth;
-        overflow-y: scroll;
-        transition: right 0.5s ease-in;
-        background-color: $color-secondary;
-        padding: 20px;
-        z-index: 9999;
-        box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
+/* ====================================================
+   HEADER TWO   
+ ====================================================== */
+.header-2-wrapper {
+    padding: 50px 0px;
+    position: relative;
+    z-index: 10;
 
-        @media (max-width: 767px) {
-            width: 320px;
-            right: -440px;
+    @media (max-width: 767px) {
+        padding: 25px 0px;
+    }
+
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-items {
+        display: flex;
+
+        @media (max-width: 991px) {
+            display: none !important;
         }
 
-        &.show {
-            right: 0px;
-        }
-
-        .close-nav {
-            border: 0;
-            background: transparent;
-            color: #fff;
-            border-radius: 30px;
-            font-size: 20px;
-            position: absolute;
-            left: 20px;
-            top: 10px;
-        }
-
-        /* Vertical Menu Style */
-        .sidebar-nav {
-            margin-top: 30px;
-
-            .mobile-nav-button {
-                background-color: $color-yellow;
-                border: none;
-                font-weight: 400;
-                padding: 15px 30px;
+        .navbar-item {
+            &:not(:last-child) {
+                margin-right: 50px;
             }
         }
 
-        .sidebar-nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            background-color: transparent;
-        }
-
-        .sidebar-nav .metismenu {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sidebar-nav .metismenu > li {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sidebar-nav .metismenu a {
-            font-size: 16px;
-            position: relative;
-            display: block;
-            padding: 10px 15px;
-            transition: all 0.3s ease-out;
-            text-decoration: none;
-            color: #fff;
-            outline-width: 0;
-            text-transform: capitalize;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .sidebar-nav .metismenu ul a {
-            padding: 10px 15px 10px 35px;
-            position: relative;
+        .current {
+            background-color: black;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.1) 100%);
+            box-shadow: inset 0px 0px 4px #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: 500;
+            color: $color-white;
 
             &:hover {
-                padding-left: 40px;
-                &::before {
-                    background-color: #fff;
+                color: $color-white;
+            }
+        }
+
+        .navbar-link,
+        .submenu-link {
+            font-size: 20px;
+            font-weight: 500;
+            color: $color-white;
+        }
+    }
+
+    // SUBMENU
+    .submenu-wrapper {
+        &:hover {
+            .submenu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .submenu {
+            min-width: 100px;
+            width: max-content;
+            padding: 10px 20px;
+            background-color: $color-yellow;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            opacity: 0;
+            margin-top: 10px;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+
+            .submenu-item {
+                width: 100%;
+                display: block;
+                position: relative;
+                &:not(:last-child) {
+                    padding-bottom: 10px;
                 }
             }
 
-            &::before {
-                position: absolute;
-                left: 15px;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                border: 2px solid #fff;
-                content: "";
-                top: 50%;
-                transition: all 0.3s ease-in-out;
-                transform: translateY(-50%);
+            .submenu-link {
+                color: $color-white;
             }
-        }
-
-        .sidebar-nav .metismenu ul ul {
-            list-style-type: circle !important;
-        }
-
-        .sidebar-nav .metismenu ul ul a {
-            padding: 10px 15px 10px 45px;
-        }
-
-        .sidebar-nav .metismenu a:hover,
-        .sidebar-nav .metismenu a:focus,
-        .sidebar-nav .metismenu a:active {
-            text-decoration: none;
-            color: #f8f9fa;
-            background: $color-primary;
-        }
-    }
-
-    .action-bar {
-        margin-top: 30px;
-        padding-left: 20px;
-        a {
-            color: #fff;
-            display: block;
-            margin-top: 12px;
-
-            i {
-                margin-right: 10px;
-            }
-
-            &.theme-btn {
-                text-align: center;
-            }
-        }
-    }
-
-    .social-icons {
-        font-size: 16px;
-        color: $color-gray;
-        cursor: pointer;
-        margin: 30px 0px;
-
-        a {
-            margin-right: 20px;
         }
     }
 }

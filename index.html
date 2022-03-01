@@ -11,6 +11,7 @@
         <!-- ============= VENDORS CSS ============= -->
         <link rel="stylesheet" href="./assets/css/vendors/icons.css" />
         <link rel="stylesheet" href="./assets/css/vendors/bootstrap.min.css" />
+        <link rel="stylesheet" href="./assets/css/vendors/modal-video.min.css" />
 
         <!-- ============= MAIN CSS ============= -->
         <link rel="stylesheet" href="./assets/css/style.css" />
@@ -57,9 +58,18 @@
                         <div class="main-menu d-flex align-items-center justify-content-between">
                             <div class="main-menu-left d-flex align-items-center">
                                 <ul class="menu-items">
-                                    <li class="menu-item">
-                                        <a href="index.html" class="menu-link">Home</a>
+                                    <li class="menu-item submenu-wrapper">
+                                        <a href="#" class="menu-link">Home</a>
+                                        <ul class="submenu">
+                                            <li class="submenu-item">
+                                                <a href="index.html" class="submenu-link">Home V1</a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="index-2.html" class="submenu-link">Home V2</a>
+                                            </li>
+                                        </ul>
                                     </li>
+
                                     <li class="menu-item">
                                         <a href="about.html" class="menu-link">About</a>
                                     </li>
@@ -87,9 +97,17 @@
                             </button>
                             <nav class="sidebar-nav">
                                 <ul class="metismenu" id="mobile-menu">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li>
+                                        <a href="index.html" class="has-arrow">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="index.html">Home V1</a></li>
+                                            <li><a href="index-2.html">Home V2</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="services.html">Services</a></li>
+                                    <li>
+                                        <a href="services.html">Services</a>
+                                    </li>
                                     <li><a href="blog.html">Blog</a></li>
                                 </ul>
                                 <a href="#" class="button mobile-nav-button mt-20 ml-20 d-inline-block"
@@ -145,36 +163,62 @@
             </div>
             <div class="hero-bottom">
                 <div class="bottom-content">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="content-left">
-                                <ul class="social-items d-flex flex-wrap align-items-center">
-                                    <li class="social-item">
-                                        <a href="#" class="social-link">Facebook</a>
-                                    </li>
-                                    <li class="social-item">
-                                        <a href="#" class="social-link">Instagram</a>
-                                    </li>
-                                    <li class="social-item">
-                                        <a href="#" class="social-link">Twitter</a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="content-left">
+                        <ul class="social-items d-flex flex-wrap align-items-center">
+                            <li class="social-item">
+                                <a href="#" class="social-link">Facebook</a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-link">Instagram</a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-link">Twitter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <a href="#" class="button hero-button">
+                        See our works
+                        <span class="icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= ABOUT ============= -->
+        <section class="about-wrapper">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-left" style="background-image: url('./assets/img/about-bg.png')">
+                        <div class="about-overlay"></div>
+                        <div class="container">
+                            <h2 class="heading-1 light">
+                                We are software <br />
+                                developement company
+                            </h2>
+                            <p class="body-text light mt-20">
+                                Duronto aimes to deliver quality and hassle-free software that is very easy to use and
+                                maintain. We believe in craftsmanship.
+                            </p>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="content-right">
-                                <a href="#" class="button hero-button">
-                                    See our works
-                                    <span class="icon">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </span>
-                                </a>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-right bg-cover" style="background-image: url('./assets/img/about-video-bg.png')">
+                        <div class="about-video">
+                            <a href="#" class="modal-video-active button play-button" data-video-id="u31qwQUeGuM">
+                                <span class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Dividers -->
         </section>
 
         <!-- ============= APPOINTMENTS ============= -->
@@ -205,8 +249,9 @@
         <script src="./assets/js/vendors/bootstrap.min.js"></script>
         <script src="./assets/js/vendors/jquery.waypoints.min.js"></script>
         <script src="./assets/js/vendors/metismenu.js"></script>
+        <script src="./assets/js/vendors/jquery-modal-video.min.js"></script>
 
         <!-- ============= MAIN JS ============= -->
-        <script src="./assets/js/active.js"></script>
+        <script src="./assets/js/main.js"></script>
     </body>
 </html>
