@@ -1,7 +1,7 @@
 /* ====================================================
     HEADINGS AND TEXT
  ====================================================== */
-.heading-1 {
+.heading-primary {
     font-size: 48px;
     font-weight: 600;
     color: $color-dark;
@@ -17,7 +17,7 @@
     }
 }
 
-.heading-2 {
+.heading-secondary {
     font-size: 40px;
     font-weight: 600;
     color: $color-dark;
@@ -33,7 +33,7 @@
     }
 }
 
-.heading-3 {
+.heading-tertiary {
     font-size: 25px;
     font-weight: 600;
     color: $color-dark;

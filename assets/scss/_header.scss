@@ -17,10 +17,9 @@
     }
 
     .logo-wrapper {
-        min-width: 310px;
+        max-width: 310px;
+        width: 100%;
         background-color: $color-white;
-        margin-top: 0;
-        margin-left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -30,15 +29,11 @@
         border-right: 1px solid $color-primary;
 
         @media (max-width: 1199px) {
-            min-width: 250px;
+            max-width: 250px;
         }
 
         @media (max-width: 1015px) {
-            min-width: 200px;
-        }
-
-        @media (max-width: 400px) {
-            min-width: 180px;
+            max-width: 230px;
         }
     }
 
@@ -180,9 +175,8 @@
     .header-button {
         background-color: $color-yellow;
         color: $color-white;
-        min-width: 240px;
+        width: 240px;
         padding: 30px;
-        height: 100%;
         display: flex;
         justify-content: center;
         font-size: 20px;
@@ -217,7 +211,7 @@
 /* ====================================================
    HEADER TWO   
  ====================================================== */
-.header-2-wrapper {
+.header-v2-wrapper {
     padding: 50px 0px;
     position: relative;
     z-index: 10;
