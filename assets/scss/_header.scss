@@ -1,0 +1,302 @@
+.header-wrapper {
+    background-color: $color-white;
+    position: relative;
+
+    @media (max-width: 991px) {
+        background-color: $color-primary;
+    }
+
+    .navbar {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-content {
+        width: 100%;
+    }
+
+    .logo-wrapper {
+        max-width: 310px;
+        width: 100%;
+        background-color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid $color-primary;
+
+        @media (max-width: 1199px) {
+            max-width: 250px;
+        }
+
+        @media (max-width: 1015px) {
+            max-width: 230px;
+        }
+    }
+
+    .menu-wrapper {
+        width: 100%;
+
+        @media (max-width: 991px) {
+            display: none !important;
+        }
+    }
+
+    // TOP BAR
+    .top-menu {
+        padding: 5px 50px;
+        border-bottom: 1px solid $color-primary;
+
+        @media (max-width: 1200px) {
+            padding: 5px 25px;
+        }
+
+        .top-menu-right {
+            margin-right: 35px;
+        }
+    }
+
+    .contact-info {
+        .contact-item {
+            font-size: 14px;
+            color: $color-primary;
+            font-weight: 300;
+            position: relative;
+            margin-right: 25px;
+
+            @media (max-width: 1146px) {
+                margin-right: 10px;
+            }
+
+            &:not(:last-child) {
+                padding-right: 25px;
+
+                @media (max-width: 1146px) {
+                    padding-right: 10px;
+                }
+            }
+
+            &:not(:last-child)::after {
+                content: "";
+                width: 1px;
+                height: 20px;
+                background-color: $color-primary;
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+
+            .item-icon {
+                color: $color-secondary;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .working-days {
+        span {
+            color: $color-primary;
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+
+    // MAIN MENU
+    .main-menu {
+        .menu-items {
+            line-height: 1;
+        }
+
+        .menu-item {
+            display: inline-block;
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 45px;
+            }
+        }
+
+        .submenu-wrapper {
+            &:hover {
+                .submenu {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        // Submenu
+        .submenu {
+            min-width: 100px;
+            width: max-content;
+            padding: 10px 20px;
+            background-color: $color-yellow;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            opacity: 0;
+            margin-top: 10px;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+
+            .submenu-item {
+                width: 100%;
+                display: block;
+                &:not(:last-child) {
+                    padding-bottom: 10px;
+                }
+            }
+
+            .submenu-link {
+                color: $color-white;
+            }
+        }
+
+        .menu-link,
+        .submenu-link {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 20px;
+            text-transform: capitalize;
+            color: $color-primary;
+            overflow: hidden;
+        }
+
+        .main-menu-left {
+            padding: 23px 50px;
+        }
+    }
+
+    .header-button {
+        background-color: $color-yellow;
+        color: $color-white;
+        width: 240px;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 500;
+        border-left: 1px solid $color-primary;
+    }
+}
+
+// MOBILE MENU
+#hamburger {
+    color: $color-white;
+    font-size: 30px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+
+    @media (max-width: 991px) {
+        display: block !important;
+    }
+
+    @media (max-width: 575px) {
+        right: 20px;
+    }
+
+    i {
+        cursor: pointer;
+    }
+}
+
+/* ====================================================
+   HEADER TWO   
+ ====================================================== */
+.header-v2-wrapper {
+    padding: 50px 0px;
+    position: relative;
+    z-index: 10;
+
+    @media (max-width: 767px) {
+        padding: 25px 0px;
+    }
+
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-items {
+        display: flex;
+
+        @media (max-width: 991px) {
+            display: none !important;
+        }
+
+        .navbar-item {
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+
+        .current {
+            background-color: black;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.1) 100%);
+            box-shadow: inset 0px 0px 4px #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: 500;
+            color: $color-white;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+
+        .navbar-link,
+        .submenu-link {
+            font-size: 20px;
+            font-weight: 500;
+            color: $color-white;
+        }
+    }
+
+    // SUBMENU
+    .submenu-wrapper {
+        &:hover {
+            .submenu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .submenu {
+            min-width: 100px;
+            width: max-content;
+            padding: 10px 20px;
+            background-color: $color-yellow;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            opacity: 0;
+            margin-top: 10px;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+
+            .submenu-item {
+                width: 100%;
+                display: block;
+                position: relative;
+                &:not(:last-child) {
+                    padding-bottom: 10px;
+                }
+            }
+
+            .submenu-link {
+                color: $color-white;
+            }
+        }
+    }
+}
